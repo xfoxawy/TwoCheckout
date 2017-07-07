@@ -4,8 +4,34 @@ Providing Simple Integration and expressive interface for 2Checkout Payment Gate
 * php >= 5.6
 * Laravel >= 5
 
-# Installtion
-* using composer `composer require "xfoxawy/2checkout:dev-master"`.
-* add `TwoCheckout\TwoCheckoutServiceProvider::class` Service Providers array in `config/app.php`.
-* add `'TwoCheckout' => TwoCheckout\Facades\TwoCheckout::class` to Alias array in `config/app.php`. 
-* publish config file and exampel view file, `php artisan vendor:publish`.
+## Installation
+
+* Use following command to install:
+
+```bash
+composer require "xfoxawy/2checkout:dev-master"
+```
+
+* Add the service provider to your `$providers` array in `config/app.php` file like: 
+
+```php
+TwoCheckout\TwoCheckoutServiceProvider // Laravel 5
+```
+```php
+TwoCheckout\TwoCheckoutServiceProvider::class // Laravel 5.1 or greater
+```
+
+* Add the alias to your `$aliases` array in `config/app.php` file like: 
+
+```php
+'TwoCheckout' => TwoCheckout\Facades\TwoCheckout // Laravel 5
+```
+```php
+'TwoCheckout' => TwoCheckout\Facades\TwoCheckout::class // Laravel 5.1 or greater
+```
+
+* Run the following command to publish configuration:
+
+```bash
+php artisan vendor:publish
+```
