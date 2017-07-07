@@ -20,7 +20,9 @@ class TwoCheckoutServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/Bootable/config.php' => config_path('2checkout.php')
+        ]);
     }
 
     /**
