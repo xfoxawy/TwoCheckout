@@ -36,7 +36,8 @@ class TwoCheckoutServiceProvider extends ServiceProvider
     }
 
     private function registerTwoCheckout(){
-        $config = new TwoCheckoutConfigAdapter($this->app['config']['2checkout']);
+        $config = (isset($this->app['config']['2checkout'])) ? $this->app['config']['2checkout'] : ['ssl_cert_path'=>'default'];
+        $config = new TwoCheckoutConfigAdapter($config);
         $instance = new TwoCheckout(new TwoCheckoutHttpAdapter($config, new Guzzle()));
         
         $this->app->singleton('twocheckout', function() use($instance){
