@@ -1,23 +1,11 @@
-TwoCheckout Laravel's Service Provider
-===============================
+# TwoCheckout Laravel's Service Provider
+Providing Simple Integration and expressive interface for 2Checkout Payment Gateway
+## Requirements
+* php >= 5.6
+* Laravel >= 5
 
-
-
-----------
-Installtion
--------------
-composer install xfoxawy/2checkout
-
-in config/app
-register TwoCheckout\TwoCheckoutServiceProvider::class to Providers array
-register TwoCheckout => TwoCheckout\Facades\TwoCheckout::class to Facades Array
-
-php artisan vendor:publish --tag=config to publish config file
-php artisan vendor:publish --tag=views to publish view example file
-
-You can use the "views/vendor/2co/example.blade.php" as test template
-
-Documentation
--------------
-
-This Project is still under Development, wait for updates on the documentation and how to use manual
+# Installtion
+* using composer `composer require "xfoxawy/2checkout:dev-master"`.
+* add `TwoCheckout\TwoCheckoutServiceProvider::class` Service Providers array in `config/app.php`.
+* add `'TwoCheckout' => TwoCheckout\Facades\TwoCheckout::class` to Alias array in `config/app.php`. 
+* publish config file and exampel view file, `php artisan vendor:publish`.
