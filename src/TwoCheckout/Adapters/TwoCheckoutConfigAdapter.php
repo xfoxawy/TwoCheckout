@@ -26,10 +26,10 @@ class TwoCheckoutConfigAdapter
         $base_url = self::API_URL;
         $http = 'https://';
 
-        if($this->env == 'development' && $this->sandbox){
+        if($this->env == 'sandbox'){
             $base_url = self::SANDBOX_URL;
         }
-        if($this->env == 'development' && !$this->verify_ssl){
+        if($this->env == 'sandbox' && !$this->verify_ssl){
             $http = 'http://';
         }
 

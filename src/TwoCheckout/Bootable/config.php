@@ -11,10 +11,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | This value is the name of your integration.
-    | Default : development 
+    | Default : sandbox 
     | Other : production
     */
-    'env' => env('2CO_ENV','development'), //or:production
+    'env' => env('2CO_ENV','sandbox'),
 
     /*
     |--------------------------------------------------------------------------
@@ -82,22 +82,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 2Checkout Sandbox
-    |--------------------------------------------------------------------------
-    |
-    | This value represents your 2Checkout Account Type.
-    | Default : false , in case usage of sandbox account
-    */
-    'sandbox' => env('2CO_SANDBOX', false),
-
-    /*
-    |--------------------------------------------------------------------------
     | 2Checkout SSL Verification
     |--------------------------------------------------------------------------
     |
     | This value represents your 2Checkout API Connection Type (Http or Https).
     | Default : true 
-    | Other :  false , in case usage of sandbox account
+    | Other :  false , in case usage of sandbox mode
     */
     'verify_ssl' => env('2CO_SSL_ON', true),
 
@@ -107,7 +97,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | This value represents your SSL Cert Path.
-    | Default : default , represents no ssl cert (used for sandbox and development mode only) 
+    | Default : default , represents no ssl cert (used for sandbox mode only) 
     | Other :  /path/to/ssl_cert
     */
     'ssl_cert_path' => env('2CO_SSL_PATH', 'default'),
